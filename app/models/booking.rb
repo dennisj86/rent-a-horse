@@ -1,4 +1,4 @@
 class Booking < ApplicationRecord
-  validates :user_id, :horse_id, presence: true
-  belongs_to :horse, :user
+  belongs_to :user
+  belongs_to :horse
 end
