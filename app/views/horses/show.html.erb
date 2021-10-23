@@ -6,5 +6,7 @@
     Speed:      <%= @horse.speed %>
     Height:     <%= @horse.height %>
   </div>
-  
+
+  <%= link_to 'Book me!', new_horse_booking_path(@horse) %>
+
 </div>
