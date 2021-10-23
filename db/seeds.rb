@@ -17,5 +17,32 @@ bojack = {
   user_id: 1
 }
 
-horse = Horse.create!(bojack)
-puts "Created #{horse.horse_name}"
+diego = {
+  horse_name: 'Diego',
+  avatar: "vvkidawcdc0eziwx9bya",
+  speed: 11,
+  height: 5,
+  obedience: 'old pony',
+  user_id: 1
+}
+iwain = {
+  horse_name: 'Sir Iwain',
+  avatar: "qg2verikcaox3mdabepu",
+  speed: 9,
+  height: 5,
+  obedience: 'great horse',
+  user_id: 1
+}
+
+merlin = {
+  horse_name: 'Merlin',
+  avatar: "bojack-horseman-season-5-1024x576_a8pzg3",
+  speed: 9,
+  height: 5,
+  obedience: 'MAAAGIC',
+  user_id: 1
+}
+[diego, bojack, iwain, merlin].each { |horse|
+  horses = Horse.create!(horse)
+  puts "Created #{horses.horse_name}"
+}
