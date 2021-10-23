@@ -2,10 +2,19 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  resources :horses, only: [:index, :show, :new, :create]
+
+#  resources :bookings, only: [:new, :create]
+
+
+
+
+
+
   # As a visitor I can see all the horses (near my location)
-  get "horses" to: "horses#index"
+#  get "horses" to: "horses#index"
   # As a visitor I can access the detail page of a horse
-  get "horses/:id" to: "horses#show"
+#  get "horses/:id" to: "horses#show"
 
   # As a user I can create a horse (put on the market to rent)
 #  get "horses/new", to: "horses#new"
@@ -19,8 +28,8 @@ Rails.application.routes.draw do
 #  delete "horses/:id", to: "horses#destroy"
 
   # As a user I can book interesting horses
-  get "horses/:id/bookings/new" to: "bookings#new"
-  post "horses/:id/bookings" to: "bookings#create"
+#  get "horses/:id/bookings/new" to: "bookings#new"
+#  post "horses/:id/bookings" to: "bookings#create"
 
   # As a user I can see my bookings/booking history
 #  get "bookings/:id" to: "bookings#show"
