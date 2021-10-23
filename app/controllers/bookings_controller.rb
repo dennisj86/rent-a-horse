@@ -1,8 +1,6 @@
 class BookingsController < ApplicationController
   def show
-
     @booking = Booking.find(params[:id])
-    raise
   end
 
   def new
@@ -12,14 +10,14 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    # we need `restaurant_id` to associate booking with corresponding restaurant
     @horse = Horse.find(params[:horse_id])
+    user = current_user
     @booking.horse = @horse
+    @booking.user = user
     @booking.save
     if @booking.save
       redirect_to horse_booking_path(@horse, @booking)
     else
-      raise
       render :new
     end
   end
@@ -27,6 +25,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:from_date, :to_date, :horse)
+    params.require(:booking).permit(:from_date, :to_date)
   end
 end

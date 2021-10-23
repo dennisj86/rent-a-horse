@@ -1,2 +1,14 @@
-<h1>your bookings</h1>
+<h1>your booking on <%= @booking.from_date %></h1>
 
+<div>
+  <%= cl_image_tag(@booking.horse.avatar, width: 400, height: 300) %>
+  Nice to meet you. My name is <%= @booking.horse.horse_name %>. Find me on the map and then <strong>LET'S GO, Brandon</strong>
+</div>
+
+<div>
+Oh no! The map is broken. You have to find me by yourself
+</div>
+<div>
+
+<%= cl_image_tag('plpqq6tph8tvbc3dowv9', width: 800, height: 600) %>
+</div>
