@@ -1,0 +1,9 @@
+<h1>Hey, I am <%= @horse.horse_name %>. Book me and then let's go, Brandon!</h1>
+<div>
+<%= cl_image_tag(@horse.avatar, width: 400, height: 300) %>
+  <div>
+    Obedience:  <%= @horse.obedience %>
+    Speed:      <%= @horse.speed %>
+    Height:     <%= @horse.height %>
+  </div>
+</div>
