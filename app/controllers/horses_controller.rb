@@ -25,7 +25,6 @@ class HorsesController < ApplicationController
     end
   end
 
-
   private
 
   def horse_params
