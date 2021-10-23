@@ -14,9 +14,15 @@ class HorsesController < ApplicationController
   end
 
   def create
-    @horse = Horse.find(horse_params)
+    @horse = Horse.new(horse_params)
+    @horse.user = current_user
     @horse.save
-    redirect_to horse_path(@horse.id)
+
+    if @horse.save
+      redirect_to horse_path(@horse.id)
+    else
+      render :new
+    end
   end
 
 
