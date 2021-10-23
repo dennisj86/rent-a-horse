@@ -1,0 +1,14 @@
+<ul>
+  <% @horses.each do |horse|  %>
+    <li>
+      <%= link_to horse.horse_name, horse_path(horse) %> |
+    </li>
+  <% end  %>
+</ul>
+
+<div>
+  <p>
+    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
+    "good job getting here, Brandon. It seems there is only one horse available right now. Lucky for you, bad luck for me. It's me, Bojack!"
+
+</div>
