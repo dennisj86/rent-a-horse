@@ -1,10 +1,5 @@
 <div class="container">
 
-
-
-  <div class="card-product">
-    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
-    <div class="card-product-infos">
       <ul>
         <% @horses.each do |horse|  %>
           <li>
@@ -12,6 +7,10 @@
           </li>
         <% end  %>
       </ul>
+
+  <div class="card-product">
+    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
+    <div class="card-product-infos">
       <p>"good job getting here, Brandon. It seems there is only one horse available right now.
       Lucky for you, bad luck for me. It's me, Bojack!"</p>
     </div>
