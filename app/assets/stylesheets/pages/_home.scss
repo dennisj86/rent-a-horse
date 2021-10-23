@@ -1,9 +1,9 @@
 // Specific CSS for your home-page
 .banner {
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   padding: 150px 0;
-  height: 1200px;
+  min-height: 1200px;
   margin-bottom: 30px;
 }
 
@@ -27,6 +27,7 @@
 .a {
   text-decoration: none;
 }
-.hp-banner {
+#hp-banner {
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://www.horseheavensaloonprosser.com/wp-content/uploads/2015/03/Horse-heaven-buidling-web-1.jpg);
+
 }
