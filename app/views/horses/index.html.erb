@@ -1,18 +1,15 @@
 <div class="container">
 
-      <ul>
-        <% @horses.each do |horse|  %>
-          <li>
-            <%= link_to horse.horse_name, horse_path(horse) %>
-          </li>
-        <% end  %>
-      </ul>
+  <% @horses.each do |horse|  %>
 
   <div class="card-product">
     <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
     <div class="card-product-infos">
+      <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
       <p>"good job getting here, Brandon. It seems there is only one horse available right now.
       Lucky for you, bad luck for me. It's me, Bojack!"</p>
+      <%= link_to "See more >", horse_path(horse) %>
     </div>
    </div>
+   <% end  %>
 </div>

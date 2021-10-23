@@ -48,3 +48,15 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+a {
+  color: red;
+  & :hover {
+    text-decoration: none;
+  }
+}
+
+.horse-name {
+  font-size: 24px;
+  color: rgb(68, 0, 255);
+}
