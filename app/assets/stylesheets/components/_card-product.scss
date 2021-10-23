@@ -51,9 +51,10 @@
 
 a {
   color: red;
-  & :hover {
-    text-decoration: none;
-  }
+}
+
+a :hover {
+  text-decoration: none;
 }
 
 .horse-name {
