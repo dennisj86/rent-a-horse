@@ -62,8 +62,8 @@
 }
 
 .footer .footer-bottom {
-  background: #db7a39;
-  color: #a84300;
+  background: $my-orange;
+  color: $my-brown;
   height: 50px;
   width: 100%;
   text-align: center;
@@ -74,5 +74,5 @@
 }
 
 a {
-  color: #a84300;
+  color: $my-brown;
 }
