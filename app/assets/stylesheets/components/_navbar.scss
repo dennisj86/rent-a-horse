@@ -1,7 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  display: flex;
   align-items: center;
+  height: 7vh;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,6 +14,15 @@
   width: 40px;
 }
 
-a {
+.nav-link {
+  a {
   color: $my-brown;
+  }
+}
+
+.navbar-collapse {
+  ul {
+    padding: 0px;
+    margin: 0px;
+  }
 }
