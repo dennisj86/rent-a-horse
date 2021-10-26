@@ -1,4 +1,4 @@
-<h1>your booking on <%= @booking.from_date %></h1>
+<h1>Hey <%= @booking.user.first_name %>, your booking on <%= @booking.from_date %></h1>
 
 <div>
   <%= cl_image_tag(@booking.horse.avatar, width: 400, height: 300) %>

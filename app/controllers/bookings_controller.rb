@@ -1,11 +1,13 @@
 class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
+    @user = current_user
   end
 
   def new
     @horse = Horse.find(params[:horse_id])
     @booking = Booking.new
+    @user = current_user
   end
 
   def create
