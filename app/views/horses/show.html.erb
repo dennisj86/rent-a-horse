@@ -4,7 +4,7 @@
   </h1>
 
   <div>
-    <%= cl_image_tag(@horse.avatar, width: 400, height: 300) %>
+    <%= cl_image_tag(@horse.photo.key, width: 400, height: 300) %>
     <div class=description>
       <p>Obedience:  <%= @horse.obedience %></p>
       <p>Speed:      <%= @horse.speed %></p>

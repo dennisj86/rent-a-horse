@@ -18,13 +18,15 @@
 </form>%>
 
 <%= form_for(@horse) do |f| %>
-  <%= f.label :horse_name %>
-  <%= f.text_field :horse_name %>
-  <%= f.label :obedience %>
-  <%= f.text_field :obedience %>
-  <%= f.label :speed %>
-  <%= f.number_field :speed %>
-  <%= f.label :height %>
-  <%= f.number_field :height %>
-  <%= f.submit %>
+  <p><%= f.label :horse_name %></p>
+    <p><%= f.text_field :horse_name %></p>
+  <p><%= f.label :obedience %></p>
+    <p><%= f.text_field :obedience %></p>
+  <p><%= f.label :speed %></p>
+    <p><%= f.number_field :speed %></p>
+  <p><%= f.label :height %></p>
+    <p><%= f.number_field :height %></p>
+  <p><%= f.label :photo %></p>
+    <p><%= f.file_field :photo, multiple: false, direct_upload: true %></p>
+  <p><%= f.submit %></p>
 <% end %>
