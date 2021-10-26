@@ -2,7 +2,7 @@
   <h1>Hey, I am <%= @horse.horse_name %>.</h1>
   <h2> Book me and then let's go, Brandon!</h2>
   <div>
-    <%= cl_image_tag(@horse.avatar, width: 400, height: 300) %>
+    <%= cl_image_tag(@horse.photo.key, width: 400, height: 300) %>
     <div class=description>
       <p>Obedience:  <%= @horse.obedience %></p>
       <p>Speed:      <%= @horse.speed %></p>

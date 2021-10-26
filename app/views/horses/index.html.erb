@@ -9,10 +9,14 @@
   <% @horses.each do |horse|  %>
 
   <div class="card-product">
-    <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill) %>
+    <% if horse.photo.attached? %>
+      <%= cl_image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
+    <% elsif horse.avatar? %>
+      <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill)  %>
+    <% end %>
     <div class="card-product-infos">
       <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
-      
+
       <%= link_to "See more >", horse_path(horse) %>
     </div>
    </div>
