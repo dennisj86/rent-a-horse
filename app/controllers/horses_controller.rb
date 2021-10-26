@@ -1,4 +1,5 @@
 class HorsesController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
     @horses = Horse.all
@@ -12,11 +13,11 @@ class HorsesController < ApplicationController
     @horse = Horse.new
   end
 
-  def create
-    @horse = Horse.find(horse_params)
+    @horse = Horse.new(horse_params)
     @horse.user = current_user
     @horse.save
-    if horse.save
+
+    if @horse.save
       redirect_to horse_path(@horse.id)
     else
       render :new
