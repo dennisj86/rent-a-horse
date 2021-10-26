@@ -7,9 +7,16 @@
     <div class="card-product-infos">
       <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
       <p>"good job getting here, Brandon. It seems there is only one horse available right now.
-      Lucky for you, bad luck for me. It's me, Bojack!"</p>
+      Lucky for you, bad luck for me. It's me, <%=horse.horse_name%>!"</p>
       <%= link_to "See more >", horse_path(horse) %>
     </div>
    </div>
    <% end  %>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

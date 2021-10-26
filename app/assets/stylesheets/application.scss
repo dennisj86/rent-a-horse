@@ -11,6 +11,8 @@
 // Your CSS partials
 @import "pages/index";
 @import "pages/home";
+@import "pages/show";
+
 @import "components/index";
 @import "components/navbar";
 @import "components/button";
@@ -18,3 +20,5 @@
 @import "components/alert";
 @import "components/card-product";
 @import "components/lists";
+@import "components/description";
+@import "components/footer";
