@@ -3,12 +3,14 @@
   background-size: cover;
   background-position: bottom;
   padding: 150px 0;
-  min-height: 1200px;
+  height: 93vh;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .banner h1 {
-  margin-top: 250px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 70px;

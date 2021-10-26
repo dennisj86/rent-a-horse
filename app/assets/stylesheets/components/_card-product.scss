@@ -47,6 +47,7 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+  width: 600px;
 }
 
 a {
@@ -61,4 +62,9 @@ a :hover {
 .horse-name {
   font-size: 24px;
   color: $my-brown;
+}
+
+.card-location {
+  position: relative;
+  left: 870px;
 }
