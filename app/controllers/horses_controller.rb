@@ -13,7 +13,6 @@ class HorsesController < ApplicationController
     @horse = Horse.new
   end
 
-  def create
     @horse = Horse.new(horse_params)
     @horse.user = current_user
     @horse.save

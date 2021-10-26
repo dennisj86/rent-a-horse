@@ -2,11 +2,11 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin-bottom: 32px;
-  margin-top: 16px;
+  margin-top: 32px;
 }
 
 .card-product img {
@@ -50,13 +50,15 @@
 }
 
 a {
-  color: red;
-  & :hover {
-    text-decoration: none;
-  }
+  color: #db7a39;
+  text-decoration: none;
+}
+
+a :hover {
+  text-decoration: none;
 }
 
 .horse-name {
   font-size: 24px;
-  color: rgb(68, 0, 255);
+  color: #a84300;
 }
