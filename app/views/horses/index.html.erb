@@ -1,18 +1,31 @@
 <div class="container">
 <h1>Available horses</h1>
 
+<div class="card-product">
+   <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
+    <p>"good job getting here, Brandon. It seems there is only one horse available right now.
+      Lucky for you, bad luck for me. It's me, Bojack!"</p>
+   </div>
   <% @horses.each do |horse|  %>
 
   <div class="card-product">
-    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
+    <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill) %>
     <div class="card-product-infos">
       <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
-      <p>"good job getting here, Brandon. It seems there is only one horse available right now.
-      Lucky for you, bad luck for me. It's me, <%=horse.horse_name%>!"</p>
+      
       <%= link_to "See more >", horse_path(horse) %>
     </div>
    </div>
    <% end  %>
+
+
+   <div class="card-product">
+    <div class="card-product-infos">
+      <h3>Want to place your own horse on the market?</h3>
+      <%= link_to "Click here", new_horse_path %>
+    </div>
+   </div>
+
 </div>
 <br>
 <br>
