@@ -3,17 +3,21 @@ class HorsesController < ApplicationController
 
   def index
     @horses = Horse.all
+    @user = current_user
   end
 
   def show
     @horse = Horse.find(params[:id])
+    @user = current_user
   end
 
   def new
     @horse = Horse.new
+    @user = current_user
   end
 
   def create
+    @user = current_user
     @horse = Horse.new(horse_params)
     @horse.user = current_user
     @horse.save
