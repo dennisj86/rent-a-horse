@@ -3,12 +3,12 @@
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient(#16a7fb, #167c74);
+  background: linear-gradient(rgb(48, 55, 42), rgb(65, 71, 59));
   transition: background 0.3s ease;
-  border: 1px solid #167c74;
+  border: 1px solid rgb(48, 55, 42);
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#167c74, #16a7fb);
+  background: linear-gradient(rgb(65, 71, 59),rgb(48, 55, 42));
   color: white;
 }
