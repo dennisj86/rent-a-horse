@@ -1,12 +1,11 @@
 <div class="container">
 <h1>Available horses</h1>
-<div class="photo-bubble">
-   <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", height: 200, width: 200, crop: :fill) %>
+  <div class="photo-bubble">
+    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", height: 200, width: 200, crop: :fill) %>
     <div class="bubble">
-
-    <p>"Good job getting here, Brandon. It seems there is only one horse available right now.
-      Lucky for you, bad luck for me. It's me, Bojack!"</p>
-   </div>
+      <p>"Good job getting here, Brandon. It seems there is only one horse available right now.
+        Lucky for you, bad luck for me. It's me, Bojack!"</p>
+    </div>
   </div>
   <% @horses.each do |horse|  %>
 
