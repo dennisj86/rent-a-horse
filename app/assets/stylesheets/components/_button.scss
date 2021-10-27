@@ -12,3 +12,18 @@
   background: linear-gradient(rgb(65, 71, 59),rgb(48, 55, 42));
   color: white;
 }
+
+.btn-gradient-orange {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient($my-orange, $my-brown);
+  transition: background 0.3s ease;
+  border: 1px solid $my-brown;
+}
+
+.btn-gradient-orange:hover {
+  background: linear-gradient($my-brown, $my-orange);
+  color: white;
+}
