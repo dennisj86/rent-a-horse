@@ -11,6 +11,14 @@
   <% @horses.each do |horse|  %>
 
   <div class="card-product">
+    <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill) %>
+        <div class="card-location">
+      <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a>
+    </div>
+    <div class="card-product-infos">
+      <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
+      <br>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem et nesciunt sapiente repellat facilis sed explicabo eligendi mollitia deleniti cum quasi incidunt, consequatur at commodi fugit? Inventore beatae error hic.</p>
     <% if horse.photo.attached? %>
       <%= cl_image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
     <% elsif horse.avatar? %>
