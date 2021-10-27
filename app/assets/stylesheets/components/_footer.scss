@@ -1,35 +1,38 @@
 .footer {
   background: #db7a39;
   color: #d3d3d3;
-  height: 400px;
+  height: 350px;
   position: relative;
 }
 
-.footer .footer-content {
+.footer-content {
   height: 350px;
   display: flex;
+  // display: grid;
+  // min-height: 100vh;
+  // grid-template-rows: auto 1fr auto;
+
 }
 
-.footer .footer-content .footer-section {
+.footer-section {
   flex: 3;
   padding-top: 25px;
   padding-right: 25px;
 }
 
-.footer .footer-content h1,
-.footer .footer-content h2 {
+.footer-content h1, h2 {
   color: white;
   margin: 0;
 }
 
-.footer .footer-content .about .contact span {
+.contact span {
   display: block;
   font-size: 1.1em;
   margin-bottom: 12px;
   margin-top: 12px;
 }
 
-.footer .footer-content .about .socials a {
+.socials a {
   border: 0px;
   width: 45px;
   height: 41px;
@@ -42,26 +45,26 @@
   transition: all .3s;
 }
 
-.footer .footer-content .about .socials a:hover {
+.socials a:hover {
   border: 0px solid white;
   color: white;
   transition: all .3s;
 }
 
-.footer .footer-content .links ul a {
+.links ul a {
   display: block;
   margin-bottom: 10px;
   font-size: 1.2em;
   transition: all .3s;
 }
 
-.footer .footer-content .links ul a:hover {
+.links ul a:hover {
   color: white;
   margin-left: 15px;
   transition: all .3s;
 }
 
-.footer .footer-bottom {
+.footer-bottom {
   background: $my-orange;
   color: $my-brown;
   height: 50px;
