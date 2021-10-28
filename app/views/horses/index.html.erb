@@ -8,26 +8,29 @@
       Lucky for you, bad luck for me. It's me, Bojack!"</p>
    </div>
   </div>
-  <% @horses.each do |horse|  %>
 
+
+  <% @horses.each do |horse|  %>
+  <%# <%= link_to horse_path(horse), :action => 'go' do %>
   <div class="card-product">
 
-    <% if horse.photo.attached? %>
-      <%= cl_image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
-    <% elsif horse.avatar? %>
-      <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill)  %>
-    <% end %>
-    <div class="card-location">
-      <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a>
-    </div>
-    <div class="card-product-infos">
-      <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
-      <br>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem et nesciunt sapiente repellat facilis sed explicabo eligendi mollitia deleniti cum quasi incidunt, consequatur at commodi fugit? Inventore beatae error hic.</p>
-      <%= link_to "See more >", horse_path(horse) %>
-    </div>
+      <% if horse.photo.attached? %>
+        <%= cl_image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
+      <% elsif horse.avatar? %>
+        <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill)  %>
+      <% end %>
+        <div class="card-location">
+          <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a>
+        </div>
+        <div class="card-product-infos">
+            <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
+            <br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem et nesciunt sapiente repellat facilis sed explicabo eligendi mollitia deleniti cum quasi incidunt, consequatur at commodi fugit? Inventore beatae error hic.</p>
+            <%= link_to "See more >", horse_path(horse) %>
+        </div>
    </div>
-   <% end  %>
+    <% end %>
+<%# <% end %>
     <br>
     <div id="map"
      style="width: 100%; height: 600px;"
@@ -35,6 +38,7 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <br>
     <br>
+
    <div class="horse-creating">
     <div class="">
       <h2>Want to place your own horse on the market?</h2>
