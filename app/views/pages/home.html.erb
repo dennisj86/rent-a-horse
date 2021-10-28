@@ -7,52 +7,26 @@
   </div>
 </div>
 <div class="container">
-    <div class="card-product">
-    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
-      <div class="card-product-infos">
-        <h4>unavailable</h4>
-        <h2>Heiko</h2>
-        <p>Fast and friedly.</p>
-      </div>
-    </div>
-    <div class="card-product">
-    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
-      <div class="card-product-infos">
-        <h3>available</h3>
-        <h2>Bojack</h2>
-        <p>Fast and friedly.</p>
-      </div>
-    </div>
-    <div class="card-product">
-    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
-      <div class="card-product-infos">
-        <h4>unavailable</h4>
-        <h2>Bella</h2>
-        <p>Strong and beautiful.</p>
-      </div>
-    </div>
-    <div class="card-product">
-    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
-      <div class="card-product-infos">
-        <h4>unavailable</h4>
-        <h2>Sunshine</h2>
-        <p>Slow but funny.</p>
-      </div>
-    </div>
-    <div class="card-product">
-    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
-      <div class="card-product-infos">
-        <h4>unavailable</h4>
-        <h2>Heiko</h2>
-        <p>Fast and friedly.</p>
-      </div>
-    </div>
-      <div class="card-product">
-    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", width: 400, height: 300, crop: :fill) %>
-      <div class="card-product-infos">
-        <h4>unavailable</h4>
-        <h2>Heiko</h2>
-        <p>Fast and friedly.</p>
-      </div>
-    </div>
+
+<h3>Our most popular horses</h3>
+  <% @horses.each do |horse|  %>
+  <%# <%= link_to horse_path(horse), :action => 'go' do %>
+  <div class="card-product">
+
+      <% if horse.photo.attached? %>
+        <%= cl_image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
+      <% elsif horse.avatar? %>
+        <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill)  %>
+      <% end %>
+        <div class="card-location">
+          <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a>
+        </div>
+        <div class="card-product-infos">
+            <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
+            <br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem et nesciunt sapiente repellat facilis sed explicabo eligendi mollitia deleniti cum quasi incidunt, consequatur at commodi fugit? Inventore beatae error hic.</p>
+            <%= link_to "See more >", horse_path(horse) %>
+        </div>
+   </div>
+    <% end %>
 </div>

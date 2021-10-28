@@ -8,9 +8,11 @@
       Lucky for you, bad luck for me. It's me, Bojack!"</p>
     </div>
   </div>
-  <% @horses.each do |horse|  %>
 
-    <div class="card-product">
+
+  <% @horses.each do |horse|  %>
+  <%# <%= link_to horse_path(horse), :action => 'go' do %>
+  <div class="card-product">
 
       <% if horse.photo.attached? %>
         <%= cl_image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
