@@ -8,7 +8,8 @@ class HorsesController < ApplicationController
     @markers = @horses.geocoded.map do |horse|
       {
         lat: horse.latitude,
-        lng: horse.longitude
+        lng: horse.longitude,
+        info_window: render_to_string(partial: 'info_window', locals: { horse: horse })
       }
     end
   end
