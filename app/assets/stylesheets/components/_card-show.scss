@@ -1,0 +1,72 @@
+.card-show {
+  border-radius: 4px;
+  overflow: hidden;
+  height: 500px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.card-show img {
+  height: auto;
+  width: 400px;
+  object-fit: cover;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin-left: 16px;
+}
+
+.card-show h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: $my-orange;
+  padding-bottom: 24px;
+  margin-left: 16px;
+}
+
+.card-show table {
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+.card-show th {
+  font-size: 22px;
+  line-height: 1.4;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.card-show td {
+  font-size: 20px;
+  line-height: 1.4;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.card-show .card-show-infos {
+  padding: 16px;
+  width: 100%;
+}
+
+.card-show p {
+  text-align: center;
+}
+
+a {
+  color: $my-orange;
+  text-decoration: none;
+}
+
+a :hover {
+  text-decoration: none;
+}
+
+.center-button-horizontal {
+  text-align: center;
+  margin-top: 24px;
+}

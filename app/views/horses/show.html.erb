@@ -1,17 +1,29 @@
 <div class="container">
-  <h1>
-    Hey, I am <%= @horse.horse_name %>.
-  </h1>
-
-  <div>
-    <%= cl_image_tag(@horse.photo.key, width: 400, height: 300) %>
-    <div class=description>
-      <p>Obedience:  <%= @horse.obedience %></p>
-      <p>Speed:      <%= @horse.speed %></p>
-      <p>Height:     <%= @horse.height %></p>
+  <div class="card-show">
+    <div>
+      <h1>
+        Hey, I am <%= @horse.horse_name %>.
+      </h1>
+      <%= cl_image_tag(@horse.photo.key, width: 400, height: 300, crop: :fill) %>
+    </div>
+    <div class="card-show-infos">
+      <table>
+        <tr>
+          <th>Obedience</th>
+          <th>Speed</th>
+          <th>Height</th>
+        </tr>
+        <tr>
+          <td><%= @horse.obedience %></td>
+          <td><%= @horse.speed %></td>
+          <td><%= @horse.height %></td>
+        </tr>
+      </table>
       <br>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae maxime ex deleniti quas error odio explicabo dolores deserunt aperiam reprehenderit eius animi, accusamus tempora impedit eum non delectus adipisci fugiat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione perferendis atque sunt dolor fugit exercitationem dolore placeat molestiae ut? Dolores nostrum recusandae necessitatibus sapiente eveniet aliquid voluptatibus qui esse quam?</p>
+      <div class="center-button-horizontal">
+        <%= link_to 'Book me!', new_horse_booking_path(@horse), class: "btn btn-gradient-orange-small" %>
+      </div>
     </div>
-  <%= link_to 'Book me!', new_horse_booking_path(@horse) %>
   </div>
 </div>
