@@ -4,7 +4,7 @@
    <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", height: 200, width: 200, crop: :fill) %>
     <div class="bubble">
 
-    <p>"Good job getting here, Brandon. It seems there is only one horse available right now.
+    <p>"Good job getting here, <%= @user.first_name  %> <%= @user.last_name %>. It seems there is only one horse available right now.
       Lucky for you, bad luck for me. It's me, Bojack!"</p>
    </div>
   </div>
