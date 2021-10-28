@@ -26,10 +26,13 @@
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem et nesciunt sapiente repellat facilis sed explicabo eligendi mollitia deleniti cum quasi incidunt, consequatur at commodi fugit? Inventore beatae error hic.</p>
       <%= link_to "See more >", horse_path(horse) %>
     </div>
-
    </div>
    <% end  %>
     <br>
+    <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <br>
     <br>
    <div class="horse-creating">

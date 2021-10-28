@@ -4,6 +4,13 @@ class HorsesController < ApplicationController
   def index
     @horses = Horse.all
     @user = current_user
+
+    @markers = @horses.geocoded.map do |horse|
+      {
+        lat: horse.latitude,
+        lng: horse.longitude
+      }
+    end
   end
 
   def show
@@ -32,6 +39,6 @@ class HorsesController < ApplicationController
   private
 
   def horse_params
-    params.require(:horse).permit(:horse_name, :speed, :height, :obedience, :photo)
+    params.require(:horse).permit(:horse_name, :speed, :height, :obedience, :photo, :address)
   end
 end
