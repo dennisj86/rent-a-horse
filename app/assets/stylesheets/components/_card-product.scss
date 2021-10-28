@@ -16,9 +16,10 @@
 }
 
 .card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 22px;
+
   margin-bottom: 4px;
+  color: $my-orange;
 }
 
 .card-product h3 {
@@ -61,10 +62,22 @@ a :hover {
 
 .horse-name {
   font-size: 24px;
-  color: $my-brown;
+  font-weight: bold;
+  color: $my-orange;
 }
 
 .card-location {
   position: relative;
   left: 870px;
+}
+
+.horse-creating {
+  text-align: center;
+
+}
+
+.horse-creating h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: $my-orange;
 }
