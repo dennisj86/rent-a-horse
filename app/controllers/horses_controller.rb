@@ -3,6 +3,7 @@ class HorsesController < ApplicationController
 
   def index
     @horses = Horse.all
+   # @horses = Horse.filter(params.slice(:speed, :heigth, :obedience, :location))
     @user = current_user
 
     @markers = @horses.geocoded.map do |horse|
