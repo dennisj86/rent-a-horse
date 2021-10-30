@@ -3,11 +3,13 @@
   color: #d3d3d3;
   height: 350px;
   position: relative;
+
 }
 
 .footer-content {
   height: 350px;
   display: flex;
+  justify-content: space-around;
   // display: grid;
   // min-height: 100vh;
   // grid-template-rows: auto 1fr auto;
@@ -15,7 +17,7 @@
 }
 
 .footer-section {
-  flex: 3;
+  flex: 2;
   padding-top: 25px;
   padding-right: 25px;
 }
@@ -40,9 +42,10 @@
   margin-right: 5px;
   text-align: center;
   display: inline-block;
-  font-size: 1.3em;
+  font-size: 1.1em;
   border-radius: 5px;
   transition: all .3s;
+  color: $my-brown;
 }
 
 .socials a:hover {
@@ -54,8 +57,9 @@
 .links ul a {
   display: block;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   transition: all .3s;
+  color: $my-brown;
 }
 
 .links ul a:hover {
@@ -74,8 +78,4 @@
   bottom: 0px;
   left: 0px;
   padding-top: 20px;
-}
-
-a {
-  color: $my-brown;
 }
