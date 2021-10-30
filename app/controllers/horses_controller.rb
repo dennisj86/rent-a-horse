@@ -16,6 +16,11 @@ class HorsesController < ApplicationController
 
   def show
     @horse = Horse.find(params[:id])
+    @marker = [{
+        lat: @horse.latitude,
+        lng: @horse.longitude,
+        info_window: render_to_string(partial: 'info_window', locals: { horse: @horse })
+      }]
   end
 
   def new
