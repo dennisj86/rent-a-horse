@@ -1,17 +1,33 @@
 class HorsesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :find_horse, only: [:show]
 
   def index
     @horses = Horse.all
-   # @horses = Horse.filter(params.slice(:speed, :heigth, :obedience, :location))
-    @user = current_user
+    if params[:obedience].present? && params[:obedience] != ""
 
-    @markers = @horses.geocoded.map do |horse|
-      {
-        lat: horse.latitude,
-        lng: horse.longitude,
-        info_window: render_to_string(partial: 'info_window', locals: { horse: horse })
-      }
+      sql_query = "obedience ILIKE :obedience"
+      # OR heigth ILIKE :query OR speed ILIKE :query"
+      @horses = Horse.where(sql_query, obedience: "%#{params[:obedience]}%")
+    end
+
+    #if params[:speed].present? && params[:speed] != ""
+      #current_speed = params[:speed].to_i
+      #sql_query = "speed ILIKE :speed"
+      # OR heigth ILIKE :query OR speed ILIKE :query"
+      #@horses = Horse.where(sql_query, speed: "%#{current_speed}%")
+    #end
+
+
+    @user = current_user
+    if @horses.length > 0
+      @markers = @horses.geocoded.map do |horse|
+        {
+          lat: horse.latitude,
+          lng: horse.longitude,
+          info_window: render_to_string(partial: 'info_window', locals: { horse: horse })
+        }
+      end
     end
   end
 
