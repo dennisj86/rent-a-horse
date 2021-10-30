@@ -1,7 +1,5 @@
 .mapboxgl-popup {
-  width: 600px;
-  display: flex;
-  align-items: center;
+
 }
 
 .mapboxgl-popup-content {
@@ -10,4 +8,13 @@
 }
 
 .card-product-popup{
+  width: 185px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-product-popup  a:hover{
+  color: $my-orange;
 }

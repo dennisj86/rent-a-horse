@@ -19,9 +19,13 @@
   width: 40px;
 }
 
-.nav-link a {
+a {
   color: white;
-  text-shadow: 0.1em 0.1em 0.2em black
+  text-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+a:hover {
+  color: white;
 }
 
 .navbar-collapse {

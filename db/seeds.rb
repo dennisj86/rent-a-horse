@@ -19,7 +19,7 @@ puts "Created #{admins.last_name}"
 puts "Creating horse..."
 bojack = {
   horse_name: 'Bojack',
-  avatar: "84XxckNP_400x400_ynm3sv",
+  avatar: "horse-1.jpg",
   address: "Winterfeldtstraße 48, 10781 Berlin",
   speed: 7,
   height: 5,
@@ -29,7 +29,7 @@ bojack = {
 
 diego = {
   horse_name: 'Diego',
-  avatar: "vvkidawcdc0eziwx9bya",
+  avatar: "horse-2.jpg",
   address: "Winterfeldtstraße 2, 10781 Berlin",
   speed: 11,
   height: 5,
@@ -38,7 +38,7 @@ diego = {
 }
 iwain = {
   horse_name: 'Sir Iwain',
-  avatar: "qg2verikcaox3mdabepu",
+  avatar: "horse-3.jpg",
   address: 'Winterfeldtstraße 20, 10781 Berlin',
   speed: 9,
   height: 5,
@@ -48,7 +48,7 @@ iwain = {
 
 merlin = {
   horse_name: 'Merlin',
-  avatar: "bojack-horseman-season-5-1024x576_a8pzg3",
+  avatar: "horse-4.jpg",
   address: 'Winterfeldtstraße 30, 10781 Berlin',
   speed: 9,
   height: 5,
