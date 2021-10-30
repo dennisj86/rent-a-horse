@@ -17,13 +17,12 @@
   <input type="submit">
 </form>%>
 
-<%= form_for(@horse) do |f| %>
+<%= simple_form_for(@horse) do |f| %>
   <p><%= f.label :horse_name %></p>
     <p><%= f.text_field :horse_name %></p>
   <p><%= f.label :address %></p>
     <p><%= f.text_field :address %></p>
-  <p><%= f.label :obedience %></p>
-    <p><%= f.text_field :obedience %></p>
+  <p><%= f.input :obedience, collection: %w[Wild Moody Great] %></p>
   <p><%= f.label :speed %></p>
     <p><%= f.number_field :speed %></p>
   <p><%= f.label :height %></p>
