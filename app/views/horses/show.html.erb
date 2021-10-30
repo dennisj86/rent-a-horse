@@ -1,9 +1,15 @@
 <div class="container">
-  <div class="card-show">
-    <div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="card-show-container">
       <h1>
         Hey, I am <%= @horse.horse_name %>.
       </h1>
+  <div class="card-show">
+    <div>
       <% if @horse.photo.attached? %>
         <%= cl_image_tag(@horse.photo.key, width: 400, height: 300, crop: :fill) %>
       <% elsif @horse.avatar? %>
@@ -11,8 +17,7 @@
       <% end %>
     </div>
     <div class="card-show-infos">
-      <div style="width: 100%; height: 250px; box-shadow: 0 0 4px rgba(0,0,0,0.2);
-  border-radius: 4px;">
+      <div>
         <table>
           <tr>
             <th>Obedience</th>
@@ -31,12 +36,16 @@
       <div class="center-button-horizontal">
         <%= link_to 'Book me!', new_horse_booking_path(@horse), class: "btn btn-gradient-orange-small" %>
       </div>
-
-      <div id="map1"
-        style="width: 100%; height: 250px; box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  </div>
+  </div>
+          <div id="map"
+        style="width: 100%; height: 500px; box-shadow: 0 0 4px rgba(0,0,0,0.2);
   border-radius: 4px;"
         data-markers="<%= @marker.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
-  </div>
+  <br>
+  <br>
+  <br>
+  <br>
 </div>
