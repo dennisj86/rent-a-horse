@@ -7,16 +7,17 @@
   </div>
 </div>
 <div class="container">
-
+<br>
+<br>
 <h3>Our most popular horses</h3>
   <% @horses.each do |horse|  %>
   <%# <%= link_to horse_path(horse), :action => 'go' do %>
   <div class="card-product">
 
       <% if horse.photo.attached? %>
-        <%= image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
+        <%= cl_image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
       <% elsif horse.avatar? %>
-        <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill)  %>
+        <%= image_tag(horse.avatar, width: 400, height: 300, crop: :fill)  %>
       <% end %>
         <div class="card-location">
           <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a>
@@ -30,3 +31,7 @@
    </div>
     <% end %>
 </div>
+<br>
+<br>
+<br>
+<br>

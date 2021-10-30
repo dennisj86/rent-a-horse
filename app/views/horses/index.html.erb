@@ -1,7 +1,7 @@
 <div class="container">
 <h1>Available horses</h1>
   <div class="photo-bubble">
-    <%= image_tag("bojack_avatar.png", height: 200, width: 200, crop: :fill) %>
+    <%= image_tag("bojack_avatar.png", height: 200, crop: :fill) %>
     <div class="bubble">
       <% if current_user %>
         <p>"Good job getting here, <%= @user.first_name  %> <%= @user.last_name %>. It seems there is only one horse available right now.
@@ -19,9 +19,9 @@
   <div class="card-product">
 
       <% if horse.photo.attached? %>
-        <%= image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
+        <%= cl_image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
       <% elsif horse.avatar? %>
-        <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill)  %>
+        <%= image_tag(horse.avatar, width: 400, height: 300, crop: :fill)  %>
       <% end %>
       <div class="card-location">
         <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a>
