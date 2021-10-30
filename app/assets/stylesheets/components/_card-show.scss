@@ -1,22 +1,27 @@
-.card-show {
-  border-radius: 4px;
+.card-show-container {
   overflow: hidden;
-  height: 650px;
   background: white;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.card-show-container h1{
+  padding-left: 20px;
+}
+
+.card-show {
   display: flex;
-  align-items: center;
+  align-self: flex-start;
   margin-bottom: 32px;
   margin-top: 32px;
   padding-left: 8px;
   padding-right: 8px;
+
 }
 
 .card-show img {
   height: auto;
   width: 400px;
   object-fit: cover;
-  box-shadow: 0 0 4px rgba(0,0,0,0.2);
   border-radius: 4px;
   margin-left: 16px;
 }
@@ -30,21 +35,19 @@
 }
 
 .card-show table {
-  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+
   width: 100%;
 }
 
 .card-show th {
   font-size: 22px;
   line-height: 1.4;
-  border: 1px solid black;
   text-align: center;
 }
 
 .card-show td {
   font-size: 20px;
   line-height: 1.4;
-  border: 1px solid black;
   text-align: center;
 }
 
@@ -57,10 +60,10 @@
   text-align: center;
 }
 
-a {
-  color: $my-orange;
-  text-decoration: none;
-}
+// a {
+//   color: $my-orange;
+//   text-decoration: none;
+// }
 
 a :hover {
   text-decoration: none;
