@@ -14,7 +14,7 @@
   <div class="card-product">
 
       <% if horse.photo.attached? %>
-        <%= cl_image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
+        <%= image_tag(horse.photo.key, width: 400, height: 300, crop: :fill) %>
       <% elsif horse.avatar? %>
         <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill)  %>
       <% end %>
