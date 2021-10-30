@@ -23,7 +23,7 @@ bojack = {
   address: "Winterfeldtstraße 48, 10781 Berlin",
   speed: 7,
   height: 5,
-  obedience: 'broken mind',
+  obedience: 'Moody',
   user_id: admins.id
 }
 
@@ -33,7 +33,7 @@ diego = {
   address: "Winterfeldtstraße 2, 10781 Berlin",
   speed: 11,
   height: 5,
-  obedience: 'old pony',
+  obedience: 'Wild',
   user_id: admins.id
 }
 iwain = {
@@ -42,7 +42,7 @@ iwain = {
   address: 'Winterfeldtstraße 20, 10781 Berlin',
   speed: 9,
   height: 5,
-  obedience: 'great horse',
+  obedience: 'Great',
   user_id: admins.id
 }
 
@@ -52,7 +52,7 @@ merlin = {
   address: 'Winterfeldtstraße 30, 10781 Berlin',
   speed: 9,
   height: 5,
-  obedience: 'MAAAGIC',
+  obedience: 'Great',
   user_id: admins.id
 }
 
