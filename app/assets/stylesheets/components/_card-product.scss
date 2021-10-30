@@ -17,7 +17,6 @@
 
 .card-product h2 {
   font-size: 22px;
-
   margin-bottom: 4px;
   color: $my-orange;
 }
@@ -46,18 +45,17 @@
   margin-top: 8px;
 }
 
+.card-product a {
+  color: $my-orange;
+}
+
+.card-product a:hover {
+  color: $my-orange;
+}
+
 .card-product .card-product-infos {
   padding: 16px;
   width: 600px;
-}
-
-a {
-  color: $my-orange;
-  text-decoration: none;
-}
-
-a :hover {
-  text-decoration: none;
 }
 
 .horse-name {
