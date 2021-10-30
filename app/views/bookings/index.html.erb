@@ -1,0 +1,29 @@
+<div class="container">
+<% @bookings.each do |booking|  %>
+  <%# <%= link_to booking_path(booking), :action => 'go' do %>
+  <div class="card-product">
+
+      <% if booking.horse.photo.attached? %>
+        <%= cl_image_tag(booking.horse.photo.key, width: 400, height: 300, crop: :fill) %>
+      <% elsif booking.horse.avatar? %>
+        <%= cl_image_tag(booking.horse.avatar, width: 400, height: 300, crop: :fill)  %>
+      <% end %>
+      <div class="card-location">
+        <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a>
+      </div>
+      <div class="card-product-infos">
+        <%= link_to booking.horse.horse_name, horse_path(booking.horse), class:"horse-name" %>
+        <br>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem et nesciunt sapiente repellat facilis sed explicabo eligendi mollitia deleniti cum quasi incidunt, consequatur at commodi fugit? Inventore beatae error hic.</p>
+        <%= link_to "See more >", horse_path(booking.horse) %>
+        <%= link_to "Show booking", booking_path(booking) %>
+      </div>
+      <div>
+        <%= link_to "Delete booking", booking_path(booking),
+                                      method: :delete,
+                                      data: { confirm: "Are you sure?"},
+                                      class:"horse-name" %>
+      </div>
+   </div>
+  <% end  %>
+</div>
