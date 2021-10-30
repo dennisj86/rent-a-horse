@@ -1,12 +1,12 @@
 <div class="container">
 <h1>Available horses</h1>
-<div class="photo-bubble">
-   <%= cl_image_tag("xnhgvnaionv6bt9ipxxh", height: 200, width: 200, crop: :fill) %>
+  <div class="photo-bubble">
+    <%= image_tag("bojack_avatar.png", height: 200, width: 200, crop: :fill) %>
     <div class="bubble">
 
     <p>"Good job getting here, <%= @user.first_name  %> <%= @user.last_name %>. It seems there is only one horse available right now.
       Lucky for you, bad luck for me. It's me, Bojack!"</p>
-   </div>
+    </div>
   </div>
 
 
@@ -19,37 +19,34 @@
       <% elsif horse.avatar? %>
         <%= cl_image_tag(horse.avatar, width: 400, height: 300, crop: :fill)  %>
       <% end %>
-        <div class="card-location">
-          <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a>
-        </div>
-        <div class="card-product-infos">
-            <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
-            <br>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem et nesciunt sapiente repellat facilis sed explicabo eligendi mollitia deleniti cum quasi incidunt, consequatur at commodi fugit? Inventore beatae error hic.</p>
-            <%= link_to "See more >", horse_path(horse) %>
-        </div>
+      <div class="card-location">
+        <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a>
+      </div>
+      <div class="card-product-infos">
+        <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
+        <br>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem et nesciunt sapiente repellat facilis sed explicabo eligendi mollitia deleniti cum quasi incidunt, consequatur at commodi fugit? Inventore beatae error hic.</p>
+        <%= link_to "See more >", horse_path(horse) %>
+      </div>
    </div>
-    <% end %>
-<%# <% end %>
+  <% end  %>
+  <br>
+  <div id="map"
+    style="width: 100%; height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <br>
-    <div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <br>
-    <br>
-
-   <div class="horse-creating">
-    <div class="">
-      <h2>Want to place your own horse on the market?</h2>
-      <br>
-      <br>
-      <%= link_to "Click here", new_horse_path, class: "btn btn-gradient-orange"  %>
+    <div class="horse-creating">
+      <div class="">
+        <h2>Want to place your own horse on the market?</h2>
+        <br>
+        <br>
+        <%= link_to "Click here", new_horse_path, class: "btn btn-gradient-orange"  %>
+      </div>
     </div>
-   </div>
-
+  </div>
 </div>
-
 
 <br>
 <br>

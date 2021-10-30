@@ -1,0 +1,14 @@
+<div class="card-product-popup">
+  <div>
+  <% if horse.photo.attached? %>
+    <%= cl_image_tag(horse.photo.key, width: 100, height: 50, crop: :fill) %>
+  <% elsif horse.avatar? %>
+    <%= cl_image_tag(horse.avatar, width: 100, height: 50, crop: :fill)  %>
+  <% end %>
+  </div>
+  <div class="card-product-infos">
+    <%= link_to horse.horse_name, horse_path(horse), class:"horse-name" %>
+    <br>
+    <%= link_to "See more >", horse_path(horse) %>
+  </div>
+</div>
