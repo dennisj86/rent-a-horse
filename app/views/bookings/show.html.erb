@@ -1,21 +1,29 @@
-<div class="container">
+<br>
+<br>
+<br>
+<br>
+<div class="container card-show-container">
 
 <h1>Hey <%= @booking.user.first_name %>, your booking on <%= @booking.from_date %></h1>
 
+<div class="card-show">
 <div>
   <% if @booking.horse.photo.attached? %>
         <%= cl_image_tag(@booking.horse.photo.key, width: 400, height: 300, crop: :fill) %>
       <% elsif @booking.horse.avatar? %>
         <%= image_tag(@booking.horse.avatar, width: 400, height: 300, crop: :fill)  %>
       <% end %>
-  Nice to meet you. My name is <%= @booking.horse.horse_name %>. Find me on the map and then <strong>LET'S GO, Brandon</strong>
-</div>
-
+      </div>
 <div id="map1"
         style="width: 100%; height: 250px; box-shadow: 0 0 4px rgba(0,0,0,0.2);
   border-radius: 4px;"
         data-markers="<%= @marker.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-      </div>
   </div>
+
+  <div class="horse-text">
+  Nice to meet you. My name is <%= @booking.horse.horse_name %>. Find me on the map and then <strong>LET'S GO, <%= @booking.user.first_name %></strong>
 </div>
+<br>
+</div>
+<br><br><br><br><br><br>

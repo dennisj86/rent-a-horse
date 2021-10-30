@@ -12,16 +12,16 @@
       <% end %>
     </div>
 </div>
-
-  <h3>Filter by:</h3>
-    <%= form_tag horses_path, method: :get do %>
-      <h4>Obedience</h4>
-      <%= select_tag :obedience, options_for_select(['', 'Wild','Moody','Great']) %>
-      <%#= select_tag :speed, options_for_select(["", 1, 2, 3, 4, 5]) %>
-      <%#= select_tag :height, options_for_select([1, 2, 3, 4, 5]) %>
-    <%= submit_tag "Filter", class: "btn btn-primary" %>
-  <% end %>
-
+  <div class="filter">
+    <h4>Filter by:</h4>
+      <%= form_tag horses_path, method: :get do %>
+        <h4>Obedience</h4>
+        <%= select_tag :obedience, options_for_select(['', 'Wild','Moody','Great']) %>
+        <%#= select_tag :speed, options_for_select(["", 1, 2, 3, 4, 5]) %>
+        <%#= select_tag :height, options_for_select([1, 2, 3, 4, 5]) %>
+      <%= submit_tag "Filter", class: "btn-gradient-orange-small" %>
+    <% end %>
+  </div>
 
   <% @horses.each do |horse|  %>
   <div class="card-product">
