@@ -6,7 +6,7 @@
       <% if booking.horse.photo.attached? %>
         <%= cl_image_tag(booking.horse.photo.key, width: 400, height: 300, crop: :fill) %>
       <% elsif booking.horse.avatar? %>
-        <%= cl_image_tag(booking.horse.avatar, width: 400, height: 300, crop: :fill)  %>
+        <%= image_tag(booking.horse.avatar, width: 400, height: 300, crop: :fill)  %>
       <% end %>
       <div class="card-location">
         <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a>
